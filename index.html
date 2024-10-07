@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Australia Energy Consumption</title>
+    <title>Week 10 Homework</title>
 
     <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
@@ -12,17 +12,17 @@
 </head>
 
 <body>
-    <h1> Australia Energy Consumption</h1>
+    <h1> Week 10 Homework Interactive Vega-Lite Map</h1>
     <div id="vegalitestackedbar"></div>
     <div id="vegalitemap"></div>
     
     <script type="text/javascript">
-        var vg_1 = "map.vg.json";
+        var vg_1 = "https://raw.githubusercontent.com/YushanLinMonash/3179_W10/refs/heads/main/W10HW_js.json";
         vegaEmbed("#vegalitemap", vg_1).then(function(result) {
         // Access the Vega view instance
         }).catch(console.error);
 
-        var vg_2 = "interactivestackedbar.vg.json";
+        var vg_2 = "https://raw.githubusercontent.com/YushanLinMonash/3179_W10/refs/heads/main/W10Map.json"; 
         vegaEmbed("#vegalitestackedbar", vg_2).then(function(result) {
         // Access the Vega view instance
         }).catch(console.error);

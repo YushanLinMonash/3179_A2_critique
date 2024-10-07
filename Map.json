@@ -13,7 +13,7 @@
         "lookup": "properties.name",
         "from": {
           "data": {
-            "url": "https://raw.githubusercontent.com/YushanLinMonash/3179_W9HW/refs/heads/main/data/Electricity_sub_state.csv",
+            "url": "https://raw.githubusercontent.com/YushanLinMonash/3179_A2_critique/refs/heads/main/DATA/Electricity_sub_state.csv",
             "format": {"type": "csv"}
           },
           "key": "State",
