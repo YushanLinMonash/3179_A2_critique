@@ -1,49 +1,92 @@
-<body style="background-color: #FFFF;">
-    <div class="main-container">
-        <h1>Australia Energy Consumption</h1>
-        <h3>topic des</h3>
-        <br>
+<!DOCTYPE html>
+<html>
+<head>
+
+  <!-- Import Vega & Vega-Lite -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.5.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
   
-       <!-- First Chart Section -->
-       <div class="section-green">
-          <div class="chart-container">
-            <div class="chart-title-box">
-              <h4>THE FIRST GRAPH</h4>
-            </div>
-            <div id="choropleth_map"></div>
-            <p class="body">first graph des</p>
-          </div>
-       </div>
+    <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+
+</head>
+<body style="background-color: #FFFF  ;">
+  <div class="main-container">
+      <h1>Australia Energy Consumption</h1>
+      <h3>
+        topic des
+      </h3>
+      <br></br>
   
-       <!-- Second Chart Section -->
-       <div class="section-green">
-          <div class="chart-container">
-            <div class="chart-title-box">
-              <h4>second</h4>
-            </div>
-            <div id="bubbleplot"></div>
-            <p class="body">second graph des</p>
-          </div>
-       </div>
+     <!-- Choropleth Globe Map -->
+    <div class="chart-container">
+      <div class="chart-title-box">
+        <div class="chart-title"></div>
+        <h4>THE FIRST GRAPH</h4>
+      </div>
+     <div id="choropleth_map" ></div>
+     <p class="body">
+      first graph des
+      <br></br>
+     </p>
+    </div> 
+
   
-       <!-- Third Chart Section (if needed) -->
-       <div class="section-green">
-          <div class="chart-container">
-            <div class="chart-title-box">
-              <h4>thrid</h4>
-            </div>
-            <div id="line_chart_map"></div>
-            <p class="body">thrid graph des</p>
-          </div>
-       </div>
-  
-       <!-- Footer with References -->
-       <div class="section-green">
-          <h5>References:</h5>
-          <p>China increased electricity generation annually from 2000 to 2020. (n.d.). Www.eia.gov. Retrieved October 16, 2023, from 
-          <a href="https://www.eia.gov/todayinenergy/detail.php?id=53959#:~:text=China%20has%20steadily%20increased%20its" target="_blank">
-            EIA Energy Info</a>
-          </p>
-          <p>FIT3179 A2 - Yushan Lin 33054754</p>
-       </div>
+    <!-- Line Graph-->
+    <div class="chart-container">
+      <div class="chart-title-box">
+        <div class="chart-title"></div>
+        <h4>second</h4>
+      </div>
+      <div id="bubbleplot"></div>
+      <p class="body">
+        second graph des
+         <br></br>
+        </p>
     </div>
+    
+    <!-- Line Graph-->
+    <div class="chart-container">
+      <div class="chart-title-box">
+        <div class="chart-title"></div>
+        <h4>thrid</h4>
+      </div>
+      
+      <div id="line_chart_map"></div>
+      <p class="body">
+        thrid graph des
+        <br></br>
+      </p>
+    </div>
+    <h5>References: 
+      <br></br>
+      China increased electricity generation annually from 2000 to 2020. (n.d.). Www.eia.gov. Retrieved October 16, 2023, from https://www.eia.gov/todayinenergy/detail.php?id=53959#:~:text=China%20has%20steadily%20increased%20its
+      <br></br>
+      ref 2
+      <br></br>
+      <h5>FIT3179 A2 - Yushan Lin 33054754</h5>
+      <br></br>
+    
+  
+  <script type="text/javascript">
+var spec2 = "https://raw.githubusercontent.com/YushanLinMonash/3179_A2_critique/refs/heads/main/Map.json";
+vegaEmbed('#choropleth_map', spec2, { "actions": false }).then(function(result) {
+  // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+}).catch(console.error);
+
+var spec3 = "https://raw.githubusercontent.com/YushanLinMonash/3179_A2_critique/refs/heads/main/Bubble_ComGDP.json";
+vegaEmbed('#bubbleplot', spec3, { "actions": false }).then(function(result) {
+  // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+}).catch(console.error);
+
+  </script>
+</body>
+</html>
