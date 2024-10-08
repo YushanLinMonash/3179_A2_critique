@@ -61,6 +61,11 @@
     vegaEmbed('#bubbleplot', spec3, { "actions": false }).then(function(result) {
       // Access the Vega view instance as result.view
     }).catch(console.error);
+
+    var spec3 = "https://raw.githubusercontent.com/30374669/FIT3179A2/refs/heads/main/js/bubbleplot.vg.json";
+    vegaEmbed('#bubbleplot', spec3, { "actions": false }).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
   </script>
 </body>
 </html>
