@@ -77,20 +77,15 @@
     
   
   <script type="text/javascript">
-    var spec2 = "js/choropleth.vg.json";
-    vegaEmbed('#choropleth_map', spec2, { "actions": false }).then(function(result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
+var spec2 = "https://raw.githubusercontent.com/YushanLinMonash/3179_A2_critique/refs/heads/main/Map.json";
+vegaEmbed('#choropleth_map', spec2, { "actions": false }).then(function(result) {
+  // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+}).catch(console.error);
 
-    var spec2 = "js/line_chart.vg.json";
-    vegaEmbed('#line_chart_map', spec2, { "actions": false }).then(function(result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
-
-    var spec3 = "js/bubbleplot.vg.json";
-    vegaEmbed('#bubbleplot', spec3, { "actions": false }).then(function(result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
+var spec3 = "https://raw.githubusercontent.com/YushanLinMonash/3179_A2_critique/refs/heads/main/Bubble_ComGDP.json";
+vegaEmbed('#bubbleplot', spec3, { "actions": false }).then(function(result) {
+  // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+}).catch(console.error);
 
   </script>
 </body>
