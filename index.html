@@ -27,19 +27,28 @@
       <!-- First Graph -->
       <div class="chart-container">
         <div class="chart-title-box">
-          <h4>Bubble Chart: Energy Consumption vs GDP</h4>
-        </div>
-        <div id="bubbleplot"></div>
-        <p class="body">This graph shows energy consumption per capita vs. GDP across Australian states. The bubble size represents population, and the color represents the state.</p>
-      </div> 
-  
-      <!-- Second Graph -->
-      <div class="chart-container">
-        <div class="chart-title-box">
           <h4>Map: Electricity Income by State</h4>
         </div>
         <div id="choropleth_map"></div>
         <p class="body">The map visualizes electricity income by state in Australia, with a color scale representing the income levels. States with higher income are darker.</p>
+      </div>
+      
+      <!-- Second Graph -->
+      <div class="chart-container">
+        <div class="chart-title-box">
+          <h4>Bubble Chart: Energy Consumption vs GDP</h4>
+        </div>
+        <div id="bubbleplot1"></div>
+        <p class="body">This graph shows energy consumption per capita vs. GDP across Australian states. The bubble size represents population, and the color represents the state.</p>
+      </div>
+
+      <!-- Third Graph -->
+      <div class="chart-container">
+        <div class="chart-title-box">
+          <h4>Bubble Plot: Another Visualization</h4>
+        </div>
+        <div id="bubbleplot2"></div>
+        <p class="body">This bubble plot provides additional insights into energy consumption data.</p>
       </div>
     
     <h5>References:</h5>
@@ -52,19 +61,22 @@
   </div>
   
   <script type="text/javascript">
-    var spec2 = "https://raw.githubusercontent.com/YushanLinMonash/3179_A2_critique/refs/heads/main/Map.json";
-    vegaEmbed('#choropleth_map', spec2, { "actions": false }).then(function(result) {
-      // Access the Vega view instance as result.view
+    // First Graph (Map)
+    var spec1 = "https://raw.githubusercontent.com/YushanLinMonash/3179_A2_critique/refs/heads/main/Map.json";
+    vegaEmbed('#choropleth_map', spec1, { "actions": false }).then(function(result) {
+      // Access the Vega view instance
     }).catch(console.error);
 
-    var spec3 = "https://raw.githubusercontent.com/YushanLinMonash/3179_A2_critique/refs/heads/main/Bubble_ComGDP.json";
-    vegaEmbed('#bubbleplot', spec3, { "actions": false }).then(function(result) {
-      // Access the Vega view instance as result.view
+    // Second Graph (Bubble Chart)
+    var spec2 = "https://raw.githubusercontent.com/YushanLinMonash/3179_A2_critique/refs/heads/main/Bubble_ComGDP.json";
+    vegaEmbed('#bubbleplot1', spec2, { "actions": false }).then(function(result) {
+      // Access the Vega view instance
     }).catch(console.error);
 
+    // Third Graph (Bubble Plot)
     var spec3 = "https://raw.githubusercontent.com/30374669/FIT3179A2/refs/heads/main/js/bubbleplot.vg.json";
-    vegaEmbed('#bubbleplot', spec3, { "actions": false }).then(function(result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    vegaEmbed('#bubbleplot2', spec3, { "actions": false }).then(function(result) {
+      // Access the Vega view instance
     }).catch(console.error);
   </script>
 </body>
